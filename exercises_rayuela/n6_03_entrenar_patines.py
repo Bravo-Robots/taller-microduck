@@ -27,7 +27,7 @@ GAMMA = None
 
 # ---------- 3. LA RECOMPENSA ----------
 # {"termino": valor} FIJA el peso | {"termino": ("*", 0.5)} lo MULTIPLICA. Los terminos se listan al ejecutar.
-#   AFECTA A: como patina. Ideas para predecir antes de cambiar:
+#   AFECTA A: como patina. Ideas para probar:
 #     · upright: premia el tronco vertical. Mas peso = patina mas tieso, pero ¿puede frenar bien?
 #     · action_rate_l2: castiga los cambios bruscos de orden. Mas castigo = movimientos suaves (¿y mas lentos para reaccionar?)
 #   Ejemplo:  PESOS = {"upright": ("*", 2.0)}

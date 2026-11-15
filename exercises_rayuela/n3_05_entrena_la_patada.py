@@ -40,7 +40,7 @@ sys.path.insert(0, str(AQUI / "windows"))
 PESO_PRECISION = 2.0     # AFECTA A: cuanto duele fallar por metros. Prueba 0 y ve que pasa: sin esto no sabe a donde ir.
 BONUS_ACIERTO = 1.0      # AFECTA A: premia caer DENTRO de la casilla. Prueba 0 (solo premias acercarse) o 5.
 PENALIZA_CAIDA = 3.0     # AFECTA A: castiga las patadas tan fuertes que tiran al pato.
-PESO_FUERZA = 0.0        # AFECTA A: castiga patear fuerte. Prueba 0.5. Prediccion habitual: "ahorra y se queda corto". Medido aqui: acerto 9 de 9. ¿Por que crees que no empeoro?
+PESO_FUERZA = 0.0        # AFECTA A: castiga patear fuerte. Prueba 0.5. Medido aqui: acerto 9 de 9 igualmente. ¿Por que crees que no empeoro?
 
 # ---------- 2. EL ALGORITMO PPO ----------
 ITERACIONES = 60            # AFECTA A: cuantas rondas de aprender. Mas rondas = mas tiempo y mejor (hasta un limite).

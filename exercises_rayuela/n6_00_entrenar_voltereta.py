@@ -56,7 +56,7 @@ GAMMA = 0.99
 #   {"termino": valor}        FIJA el peso
 #   {"termino": ("*", 0.5)}   lo MULTIPLICA (0.5 = la mitad, 2 = el doble)
 #
-# Ideas, con una pregunta para PREDECIR antes de cambiar (y comprobarlo cuando tengas una GPU):
+# Ideas para probar, cada una con una pregunta (y comprobarlo cuando tengas una GPU):
 #   · roulade_overspeed -> 0 : sin castigo por girar rapido. El propio fichero cuenta que el PRIMER entrenamiento, sin ese coste,
 #     aprendio un "latigazo" violento: la misma vuelta, mas rapido y sin cuidado. ¿Por que es "optima" para el robot, aunque sea fea?
 #   · roulade_stand_tax -> 0 : sin castigo por quedarse agachado tras la vuelta. ¿Se levantara o se quedara hecho un ovillo?

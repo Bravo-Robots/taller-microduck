@@ -3,8 +3,8 @@ Estas curvas son REALES: las sacamos entrenando el mismo robot (levantarse del s
 cambiando UN solo parametro cada vez. Tu no necesitas GPU: aqui las comparas.
 
 COMO SE USA
-  1) ANTES de marcar una casilla, lee que se cambio en ese experimento.
-  2) Marca la casilla: aparece la curva. ¿Acertaste?
+  1) Lee que se cambio en cada experimento.
+  2) Marca la casilla: aparece la curva. ¿Que le ha pasado al aprendizaje?
   3) Cambia de grafica (recompensa / cuanto aguanta / exploracion) y el eje de abajo (rondas / minutos).
   Si la curva SUBE, el robot esta aprendiendo. Cuanto antes suba, mejor entrenado va.
   Si una curva "se sale de la grafica", es que se ha descontrolado por completo.
@@ -49,7 +49,7 @@ grafica = tk.StringVar(value="recompensa")
 eje = tk.StringVar(value="rondas")
 
 izq = tk.Frame(raiz, padx=12, pady=10); izq.pack(side="left", fill="y")
-tk.Label(izq, text="1 · Predice  2 · Marca", font=("Segoe UI", 13, "bold")).pack(anchor="w")
+tk.Label(izq, text="Marca un experimento", font=("Segoe UI", 13, "bold")).pack(anchor="w")
 for n, v in marcadas.items():
     etiqueta, cambio, color = EXPERIMENTOS[n]
     fila = tk.Frame(izq); fila.pack(anchor="w", pady=3, fill="x")

@@ -10,7 +10,7 @@ COMO USARLO (unos 6 minutos en total):
   2. Cambia PESO_FUERZA = 0.5 y NOMBRE_POLITICA = "ahorradora". Ejecuta.
   3. (opcional) CASILLAS = [3, 7] y NOMBRE_POLITICA = "solo_3_y_7": ¿generaliza a las casillas que no vio?
   4. Ejecuta este fichero: te da la tabla comparativa.
-Predice antes de mirar: ¿que politica acierta mas? ¿cual se queda corta? ¿por que?
+Mira la tabla: ¿que politica acierta mas? ¿cual se queda corta? ¿por que?
 """
 import json, pathlib, sys
 

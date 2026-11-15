@@ -28,7 +28,7 @@ GAMMA = None
 
 # ---------- 3. LA RECOMPENSA ----------
 # {"termino": valor} FIJA el peso | {"termino": ("*", 0.5)} lo MULTIPLICA. Los terminos se listan al ejecutar.
-#   AFECTA A: como camina. Ideas para predecir antes de cambiar:
+#   AFECTA A: como camina. Ideas para probar:
 #     · foot_slip: castiga resbalar el pie. Mas castigo = pasos mas seguros en escalones, pero ¿mas lentos?
 #     · air_time: premia levantar los pies. Menos premio = pasos mas bajos (¿tropieza mas con los escalones?)
 #   Ejemplo:  PESOS = {"foot_slip": ("*", 2.0)}
