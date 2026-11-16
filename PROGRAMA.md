@@ -19,6 +19,40 @@ Cada bloque es una parte de ese camino. **Entender cada etapa** importa porque, 
 Los archivos están en dos carpetas: `workshop-ia-fisica/exercises/` (la serie base, `n1` a `n3`) y `exercises_rayuela/` (el resto).
 Las diapositivas: `workshop-ia-fisica/presentaciones/Presentacion_03_taller_completo.pptx` (y `.pdf`). Si una palabra no la conoces: [`GLOSARIO.md`](GLOSARIO.md).
 
+## Si usas Mac o Linux
+El taller está hecho para Windows (`INSTALAR.bat`). En Mac y Linux, desde la carpeta del repo:
+
+```bash
+./instalar.sh          # equivale a INSTALAR.bat (necesita Internet: las wheels/ son de Windows)
+```
+
+Debe acabar en **TODO LISTO**. Los ejercicios se lanzan desde la terminal (o con `F5` en VS Code, que ya apunta al `.venv`).
+
+**En Mac hay dos formas de lanzar un ejercicio, según el visor que abre.** macOS solo deja abrir ventanas desde el hilo principal, y MuJoCo tiene dos visores que lo resuelven distinto:
+
+| El ejercicio abre… | En Mac se lanza con | Ejercicios |
+|---|---|---|
+| `mujoco.viewer.launch(...)` (el visor manda) | `workshop-ia-fisica/.venv/bin/python` | `n1_01`, `n1_03` |
+| `mujoco.viewer.launch_passive(...)` (el script manda), o nada | `workshop-ia-fisica/.venv/bin/mjpython` | todos los demás (`n1_04`, `n0_00`, la rayuela, la cuerda, patines, obstáculos…) |
+
+```bash
+workshop-ia-fisica/.venv/bin/python   workshop-ia-fisica/exercises/n1_03_despiece.py
+workshop-ia-fisica/.venv/bin/mjpython workshop-ia-fisica/exercises/n1_04_robot_por_dentro.py
+```
+
+Si te equivocas lo notarás enseguida:
+- `n1_01` o `n1_03` con `mjpython` → `RuntimeError: Caught an unknown exception!`
+- un visor pasivo con `python` → `RuntimeError: launch_passive requires that the Python script be run under mjpython on macOS`
+
+`F5` en VS Code usa `mjpython` en Mac, así que `n1_01` y `n1_03` hay que lanzarlos desde la terminal.
+En **Linux** no hay esta diferencia: todo se lanza con `workshop-ia-fisica/.venv/bin/python`.
+
+**Límites conocidos en Mac:**
+- `n3_00` y `n3_07` lanzan `scripts/infer_policy.py` con `python` (no `mjpython`), y ese script usa el visor pasivo: en Mac fallan al abrir la ventana.
+- Los teclados de los ejercicios (`flechas`, `q`, `n`…) funcionan en la terminal con un sustituto de `msvcrt` (`posix/msvcrt_posix.py`).
+- `lanzar.bat`, `MJLAB.bat` y `COMPROBAR.bat` no tienen versión `.sh`: usa `workshop-ia-fisica/.venv/bin/python <script>` directamente.
+- Probado en Mac: `instalar.sh` (TODO LISTO), `n1_03` y `n1_04`. El resto de ejercicios con visor y Linux aún no se han probado uno a uno.
+
 ## Los 14 ejercicios esenciales
 Hay más ejercicios de los que caben en cinco horas. En cada bloque están marcados como **Esencial** los que cubren los cuatro puntos de la descripción oficial (MuJoCo y escenas propias, RL y PPO, recompensa y entrenamiento corto, ROS 2 y ONNX jugando a la rayuela). Los marcados como **Extra** son para quien avance más rápido o para hacer en casa.
 
